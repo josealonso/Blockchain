@@ -1,0 +1,39 @@
+Fuente: https://substrate.dev/docs/en/  30-nov-2020
+
+
+La red Polkadot se lanzó en mayo de 2020. 
+
+
+REQUISITOS para desarrollar en Substrate
+
+ conceptos básicos de la cadena de bloques y terminología asociada cómo cabecera bloque hash, transacción o firma. substrat está programado con el lenguaje Rust, que usa patrones de diseño novedosos para hacer un código más seguro y más rápido.
+
+ arquitectura the substrate
+
+ el cliente the substrate es un nodo de la cadena de bloques se puede dividir en varios componentes:
+
+ unidad de almacenamiento punto viene con un mecanismo simple de clave-valor-
+
+ motor de ejecución.  Determina cómo se procesan los bloques incluyendo la lógica de transición de estados. En substrate el código se compila en WebAssembly y el resultado forma parte del estado de la cadena de bloques.  Aparte de este motor de ejecución, pueden incluir otro que genera código para la plataforma del cliente.
+
+ Red P2P. Substrate usa la biblioteca libp2p.
+
+ motores motores de consenso proporciona la lógica que pone de acuerdo los participantes cadena de bloques es posible usar consensos personalizados.
+
+ RPC (llamada a procedimiento remoto). Substrate proporciona servidores HTTP y servidores de WebSockets.
+
+Métricas de telemetría . Substrate usa el servidor embebido Prometheus.
+
+
+
+ Se puede usar Substrate de tres maneras:
+
+
+
+1.- La manera más fácil de usar Substrate  es con un nodo preconfigurado. Es la forma más rápida, pero a cambio la forma menos flexible.
+
+2.- Con el entorno de trabajo llamado FRAME (Framework for Runtime Aggregation of Modularized Entities). 
+
+3.- La forma más lenta y la más flexible consiste en construir un nudo desde cero usando solo el lenguaje WASM. En esta tercera forma de construir una cadena de bloques no se usa ningún entorno de trabajo.
+
+
